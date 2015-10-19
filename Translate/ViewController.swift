@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
+        let Languages = ["French":"fr", "English":"en"];
         
         let langStr = ("en|fr").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
@@ -47,6 +48,8 @@ class ViewController: UIViewController {
         indicator.startAnimating()
         
         var result = "<Translation Error>"
+        
+        
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
             
