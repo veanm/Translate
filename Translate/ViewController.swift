@@ -8,16 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var textToTranslate: UITextView!
-    @IBOutlet weak var translatedText: UITextView!
-    
-    //var data = NSMutableData()
+    @IBOutlet weak var textToTranslate:     UITextView!
+    @IBOutlet weak var translatedText:      UITextView!
+    @IBOutlet weak var languageSelection:   UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,7 +26,7 @@ class ViewController: UIViewController {
     @IBAction func translate(sender: AnyObject) {
         
         let str = textToTranslate.text
-        let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet());
         
         let Languages = ["French":"fr", "English":"en"];
         
@@ -72,5 +70,28 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    // MARK stuff for picker thing
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        //code
+        return 1;
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        //code
+        return 5;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        //code
+        return "stuff";
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //code
+    }
+    
+    
+    
 }
 
