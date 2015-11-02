@@ -26,7 +26,7 @@
                                 <rect key="frame" x="142" y="161" width="37" height="37"/>
                                 <color key="color" red="0.10588235294117647" green="0.49019607843137253" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8V8-2y-ecX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="translate_app_Icon_87x87.png" translatesAutoresizingMaskIntoConstraints="NO" id="8V8-2y-ecX">
                                 <rect key="frame" x="96" y="213" width="128" height="128"/>
                             </imageView>
                         </subviews>
@@ -41,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app_Icon.png" width="84" height="84"/>
+        <image name="translate_app_Icon_87x87.png" width="87" height="87"/>
     </resources>
 </document>
