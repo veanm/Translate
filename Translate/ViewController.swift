@@ -56,6 +56,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         let str = textToTranslate.text
         let escapedStr = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet());
         
+        if(textToTranslate.text == ""){
+            translatedText.text = "ERROR: No text entered!";
+            return;
+        }
+        
         if(LangDict[TranslateFromSelected.text!] == LangDict[TranslateToSelected.text!]){
             translatedText.text = textToTranslate.text!;
             return;
